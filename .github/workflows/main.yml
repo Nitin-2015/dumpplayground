@@ -6,3 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🐧 GitHub Action running on ${{ runner.os }}"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the Source code from the latest commit
+      - uses: actions/checkout@v3
+        with:
+          ref: develop
